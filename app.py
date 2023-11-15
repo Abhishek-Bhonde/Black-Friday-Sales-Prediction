@@ -41,7 +41,7 @@ X = scaler.fit_transform(X)
 def home():
     return render_template('index.html')
 
-@app.route('/predict',methods=['POST'])
+@app.route('/predict1',methods=['POST'])
 def predict():
     
     if request.method == 'POST':
