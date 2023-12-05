@@ -3,7 +3,7 @@ import pandas as pd
 from flask import Flask, request, jsonify, render_template
 import pickle
 
-app = Flask(__name__)
+app = Flask(__name__, template_folder="template", static_folder="static")
 model = pickle.load(open('model.pkl', 'rb'))
 
 train = pd.read_csv('train.csv')
